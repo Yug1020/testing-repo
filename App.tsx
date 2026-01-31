@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-// import { Navbar } from './components/Navbar';
-// import { Hero } from './components/Hero';
-// import { Features } from './components/Features';
-// import { MarketData } from './components/MarketData';
-// import { AIConsultant } from './components/AIConsultant';
-// import { WaitlistModal } from './components/WaitlistModal';
-// import { ArrowUpRight } from 'lucide-react';
+import { Navbar } from './components/Navbar';
+import { Hero } from './components/Hero';
+import { Features } from './components/Features';
+import { MarketData } from './components/MarketData';
+import { AIConsultant } from './components/AIConsultant';
+import { WaitlistModal } from './components/WaitlistModal';
+import { ArrowUpRight } from 'lucide-react';
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,14 +17,14 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
-      {/* <Navbar onJoinWaitlist={handleOpenModal} /> */}
+      <Navbar onJoinWaitlist={handleOpenModal} />
       
       <main>
-        {/* <Hero onJoinWaitlist={handleOpenModal} /> */}
+        <Hero onJoinWaitlist={handleOpenModal} />
         
-        {/* <Features /> */}
+        <Features />
 
-        {/* <MarketData /> */}
+        <MarketData />
 
         {/* AI Section */}
         <section className="py-24 bg-white relative overflow-hidden">
@@ -60,12 +60,12 @@ export default function App() {
                   className="group flex items-center gap-2 text-royal-900 font-semibold hover:text-royal-800 transition-colors"
                 >
                   Get full access 
-                  {/* <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /> */}
+                  <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </button>
               </div>
 
               <div className="flex-1 w-full">
-                {/* <AIConsultant /> */}
+                <AIConsultant />
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@ export default function App() {
                     <div className="p-1.5 bg-white rounded text-royal-900">
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-6l-2 3h-4l-2-3H2" /><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" /></svg>
                     </div>
-                    <span className="font-serif font-bold text-xl">Indo-British Commerce Solutions</span>
+                    <span className="font-serif font-bold text-xl">Gateway to GMT Commerce Solutions</span>
                  </div>
                  <p className="text-slate-400 max-w-sm mb-6">
                    Empowering businesses to trade between the UK and India with confidence, speed, and intelligence.
@@ -109,7 +109,7 @@ export default function App() {
               </div>
             </div>
             <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-              <p>&copy; 2024 Indo-British Commerce Solutions. All rights reserved.</p>
+              <p>&copy; 2024 Gateway to GMT Commerce Solutions. All rights reserved.</p>
               <div className="flex gap-6">
                 <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
                 <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
@@ -119,7 +119,7 @@ export default function App() {
         </footer>
       </main>
 
-      {/* <WaitlistModal isOpenProp={isModalOpen} onClose={handleCloseModal} /> */}
+      <WaitlistModal isOpenProp={isModalOpen} onClose={handleCloseModal} />
     </div>
   );
 }
